@@ -1,0 +1,9 @@
+<div class="blank"></div>
+
+<div *ngFor="let artist of artist_list">
+  <app-artist
+    [artist]="artist"
+    (newItemEvent)="FindSongList($event)"
+  ></app-artist>
+  <div class="separation"></div>
+</div>

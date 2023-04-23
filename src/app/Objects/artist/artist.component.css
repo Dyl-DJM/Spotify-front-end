@@ -1,0 +1,7 @@
+.square {
+  border-style: solid;
+  border-color: rgb(187, 178, 178);
+  border-width: 1px;
+
+  cursor: pointer;
+}

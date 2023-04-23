@@ -1,0 +1,13 @@
+<div *ngIf="show_playlist === true">
+  <div *ngFor="let playlist of playlists">
+    <app-playlist-name
+      [monInput]="playlist"
+      (newItemEvent)="find($event)"
+    ></app-playlist-name>
+  </div>
+  <div><br /></div>
+</div>
+
+<div *ngIf="show_playlist === false">
+  <app-playlist-songs [monInput]="play_list_to_find"></app-playlist-songs>
+</div>

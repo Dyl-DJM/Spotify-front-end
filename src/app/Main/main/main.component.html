@@ -1,0 +1,31 @@
+<div class="blank"></div>
+
+<div *ngIf="type === 'artist'">
+  <div>
+    <app-artist-navbar (newItemEvent)="notifyUser($event)"></app-artist-navbar>
+  </div>
+  <div *ngIf="type_list === 0">
+    <app-artist-list
+      [artist_list]="artist_list"
+      (newItemEvent)="FindSongList($event)"
+    ></app-artist-list>
+  </div>
+</div>
+
+<div *ngIf="type === 'album'">
+  <div>
+    <app-album-navbar
+      (newItemEvent)="notifyUserByAlbum($event)"
+    ></app-album-navbar>
+  </div>
+  <div *ngIf="type_list === 0">
+    <app-album-list
+      [album_list]="album_list"
+      (newItemEvent)="FindSongList($event)"
+    ></app-album-list>
+  </div>
+</div>
+
+<div *ngIf="type_list === 1">
+  <app-song-list [song_list]="song_list"></app-song-list>
+</div>

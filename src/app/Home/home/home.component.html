@@ -1,0 +1,24 @@
+<div class="left">
+  <app-menu
+    [username]="paramValue"
+    (newItemEvent)="changeType($event)"
+  ></app-menu>
+</div>
+
+<div class="right">
+  <div class="box" *ngIf="type === 1">
+    <app-main [type]="'artist'"></app-main>
+  </div>
+
+  <div class="box" *ngIf="type === 2">
+    <app-main [type]="'album'"></app-main>
+  </div>
+
+  <div class="box" *ngIf="type === 3">
+    <app-connexion></app-connexion>
+  </div>
+
+  <div class="box" *ngIf="type === 4">
+    <app-playlist [username]="username"></app-playlist>
+  </div>
+</div>

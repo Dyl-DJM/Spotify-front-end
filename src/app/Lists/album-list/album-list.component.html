@@ -1,0 +1,6 @@
+<div class="blank"></div>
+
+<div *ngFor="let album of album_list">
+  <app-album [album]="album" (newItemEvent)="FindSongList($event)"></app-album>
+  <div class="separation"></div>
+</div>

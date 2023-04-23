@@ -1,0 +1,15 @@
+<div class="blank"></div>
+
+<form #varForm="ngForm" (ngSubmit)="validUsername(varForm)">
+  <input
+    name="username"
+    [ngModel]="username"
+    placeholder="Entrez un nom d'utilisateur"
+    pattern="[a-zA-Z]+"
+    required
+    maxlength="15"
+    minlength="2"
+    #nomVariable="ngModel"
+  />
+  <button type="submit" [disabled]="varForm.invalid">connexion</button>
+</form>

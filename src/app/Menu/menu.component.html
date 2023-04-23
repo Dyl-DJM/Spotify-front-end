@@ -1,0 +1,21 @@
+<div *ngIf="username === null" (click)="Connexion()" class="point">
+  Non connecté
+</div>
+
+<div *ngIf="username !== null" (click)="Connexion()" class="point">
+  &nbsp; &nbsp;{{ 'Pseudo' | bold }} : {{ username }}
+</div>
+
+<div (click)="ArtistSearch()" class="point">
+  <i class="logo" class="material-icons">person</i> Artiste
+</div>
+
+<div (click)="AlbumSearch()" class="point">
+  <i class="logo" class="material-icons">album</i> Album
+</div>
+
+<div *ngIf="username !== null">
+  <div (click)="PlayList()" class="point">
+    <i class="logo" class="material-icons">queue_music</i> PlayLists
+  </div>
+</div>
